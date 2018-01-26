@@ -1,0 +1,94 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		max-width: 616px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#whole {
+		border: 1px solid #ccc;
+		padding: 5px;
+		margin-top: 50px;
+	}
+	ul li {
+		list-style: none;
+	}
+	.tab-ct .header:after{
+		content: '';
+		display:block;
+		clear: both;
+	}
+	.tab-ct .header> li{
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		border: 1px solid #ccc;
+		border-right: none;
+		float: left;
+		text-align: center;
+	}
+	.tab-ct .header> li.active{
+		background: #ccc;
+	}
+	.tab-ct .header > li:last-child{
+		border-right: 1px solid #ccc;
+	}
+	.tab-ct .content > li{
+		width: 582px;
+		height: 200px;
+		border: 1px solid #ccc;
+		border-top: none;
+		padding: 10px;
+		display: none;
+	}
+	.tab-ct .content> li.active{
+		display: block;
+	}
+</style>
+</head>
+<body>
+<div id="whole">
+	<div class="tab-ct">
+		<ul class="header">
+			<li>tab1</li>
+			<li class="active">tab2</li>
+			<li>tab3</li>
+		</ul>
+		<ul class="content">
+			<li>内容1</li>
+			<li class="active">内容2</li>
+			<li>内容3</li>
+		</ul>
+	</div>
+</div>
+	<script>
+	var tabs = document.querySelectorAll('.tab-ct .header > li');
+	var panels = document.querySelectorAll('.tab-ct .content > li');
+
+	tabs.forEach(function(tab){
+		tab.addEventListener('click', function(){
+
+			tabs.forEach(function(node){
+				node.classList.remove('active');
+			})
+
+			this.classList.add('active');
+			var index = [].indexOf.call(tabs,this);
+
+			panels.forEach(function(node){
+				node.classList.remove('active');
+			})
+
+			panels[index].classList.add('active');
+		})
+	})
+	</script>
+</body>
+</html>

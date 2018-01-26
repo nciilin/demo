@@ -1,0 +1,168 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+	*{
+		margin: 0;
+		padding: 0;
+	}
+	body {
+		max-width: 616px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	#whole {
+		border: 1px solid #ccc;
+		padding: 5px;
+		margin-top: 50px;
+	}
+	ul li {
+		list-style: none;
+	}
+	.tab-ct .header:after{
+		content: '';
+		display:block;
+		clear: both;
+	}
+	.tab-ct .header> li{
+		width: 200px;
+		height: 30px;
+		line-height: 30px;
+		border: 1px solid #ccc;
+		border-right: none;
+		float: left;
+		text-align: center;
+	}
+	.tab-ct .header> li.active{
+		background: #ccc;
+	}
+	.tab-ct .header > li:last-child{
+		border-right: 1px solid #ccc;
+	}
+	.tab-ct .content > li{
+		width: 582px;
+		height: 200px;
+		border: 1px solid #ccc;
+		border-top: none;
+		padding: 10px;
+		display: none;
+	}
+	.tab-ct .content> li.active{
+		display: block;
+	}
+
+
+</style>
+</head>
+<body>
+<div id="whole">
+	<div class="tab-ct">
+		<ul class="header">
+			<li>tab1</li>
+			<li class="active">tab2</li>
+			<li>tab3</li>
+		</ul>
+		<ul class="content">
+			<li>内容1</li>
+			<li class="active">内容2</li>
+			<li>内容3</li>
+		</ul>
+	</div>
+</div>
+
+<div id="whole">
+	<div class="tab-ct">
+		<ul class="header">
+			<li>tab1</li>
+			<li class="active">tab2</li>
+			<li>tab3</li>
+		</ul>
+		<ul class="content">
+			<li>内容1</li>
+			<li class="active">内容2</li>
+			<li>内容3</li>
+		</ul>
+	</div>
+</div>
+	<script>
+/*
+		function Tab(tabNode){
+
+			this.init = function(tabNode){
+				this.tabs = tabNode.querySelectorAll('.tab-ct .header > li');
+				this.panels = tabNode.querySelectorAll('.tab-ct .content >li');
+				this.tabHeader = tabNode.querySelector('.tab-ct .header');
+
+			}
+			
+			this.bind = function(){
+				var self = this;
+
+				this.tabHeader.onclick = function(e){
+
+					if(e.target.tagName.toLowerCase() === 'li'){
+						self.tabs.forEach(function(node){
+							node.classList.remove('active');
+
+						})
+						
+
+						var index = [].indexOf.call(self.tabs, e.target);
+
+						self.panels.forEach(function(node){
+							node.classList.remove('active');
+
+						})
+						self.panels[index].classList.add('active');
+					}
+
+				}
+			}
+			this.init(tabNode)
+			this.bind()
+		}
+
+		var tabNode1 = document.querySelectorAll('.tab-ct')[0];
+		var tabNode2 = document.querySelectorAll('.tab-ct')[1];
+
+		var tab1 = new Tab(tabNode1)
+		var tab2 = new Tab(tabNode2)
+	*/
+		function Tab(tabNode){
+			this.init(tabNode)
+			this.bind()
+		}
+
+		Tab.prototype.init = function(tabNode){
+			this.tabs = tabNode.querySelectorAll('.tab-ct .header > li');
+			this.panels = tabNode.querySelectorAll('.tab-ct .content >li');
+			this.tabHeader = tabNode.querySelector('.tab-ct .header');
+		}
+		Tab.prototype.bind = function(){
+			var self = this;
+
+			this.tabHeader.onclick = function(e){
+
+				if(e.target.tagName.toLowerCase() === 'li'){
+					self.tabs.forEach(function(node){
+						node.classList.remove('active');
+					})
+					var index = [].indexOf.call(self.tabs, e.target);
+					self.panels.forEach(function(node){
+						node.classList.remove('active');
+
+					})
+					self.panels[index].classList.add('active');
+				}
+			}
+		}
+		
+		var tabNode1 = document.querySelectorAll('.tab-ct')[0];
+		var tabNode2 = document.querySelectorAll('.tab-ct')[1];
+
+		var tab1 = new Tab(tabNode1)
+		var tab2 = new Tab(tabNode2)
+	</script>
+</body>
+</html>

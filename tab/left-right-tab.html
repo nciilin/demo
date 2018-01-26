@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+  <meta charset="utf-8">
+  <title>left-right-tab</title>
+  <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  body{
+    width: 600px;
+    height: 400px;
+    margin: 0 auto;
+
+  }
+
+  ul li {
+     width:98px;
+     height:80px; 
+     list-style: none;
+  }
+
+  .header > li{
+    float: left;
+    text-align: center;
+    line-height:100px;
+    border: 1px solid #ccc;
+    font-weight: bold;
+  }
+  .header>li.active{
+  background:yellow;
+}
+
+.header>li:last-child{
+  border-right:1px solid #ccc;
+}
+.header::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+.wrap{
+  width:300px;
+  height:200px;
+  position:relative;
+  overflow:hidden;
+}
+.wrap .panels{
+  width:900px;
+  position:absolute;
+}
+.wrap .panels>li{
+  color:#fff;
+  float:left;
+  width:300px;
+  height:200px;
+  line-height:200px;
+  text-align:center;
+  font-size:40px;
+  border:1px solid #ccc;
+  border-bottom:none;
+}
+.wrap .panels>li:nth-child(1){
+  background:#ccc;
+}
+.wrap .panels>li:nth-child(2){
+  background:#f3e433;
+}
+.wrap .panels>li:nth-child(3){
+  background:#00f;
+}
+  </style>
+</head>
+<body>
+  <ul class="header">
+    <li class="active">tab1</li>
+    <li>tab2</li>
+    <li>tab3</li>
+  </ul>
+  <div class="wrap">
+    <ul class="panels">
+      <li>内容</li>
+      <li>内容</li>
+      <li>内容</li>
+    </ul>
+  </div>
+  <script>
+    $('.header > li').on('click', function(){
+      var $this = $(this);
+      var idx = $this.index();
+      var panelWidth = $('.wrap').width();
+      $this.addClass('active').siblings().removeClass('active');
+      $('.panels').animate({left: -panelWidth * idx});
+    })
+
+
+
+
+
+
+    /*
+    $('.header > li').on('click', function(){
+      var $this = $(this);
+      var index = $this.index();
+      var panelWidth = $('.wrap').width();
+      $this.addClass('active').siblings().removeClass('active');
+      $('.panels').animate({left: -panelWidth*index});
+    })
+    */
+  </script>
+</body>
+</html>
