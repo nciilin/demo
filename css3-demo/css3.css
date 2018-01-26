@@ -1,0 +1,60 @@
+
+div {
+  margin-top: 10px;
+  width: 120px;
+  height: 120px;
+  border: 2px solid #ccc;
+}
+.transit {
+  transition: width,height linear 3s;
+}
+.circular:hover{
+  border-radius: 0 30px;
+}
+
+.circle:hover {
+  border-radius: 50%;
+}
+
+.shade:hover {
+  box-shadow: 10px 5px rgba(0,0,0,0.3);
+}
+
+.expand:hover {
+  margin-left: 20px;
+  transform: scale(1.2)
+}
+.shrink:hover {
+  transform: scale(0.7)
+}
+.shift:hover {
+  transform: translate(40px);
+}
+.spin:hover {
+  transform: rotate(30deg);
+}
+.move:hover {
+  transform: translateX(40px);
+}
+.spin3:hover {
+  transform: rotateX(180deg);
+}
+.bgchange:hover {
+  background: linear-gradient(to right, red,orange,yellow,green,blue,indigo,violet,rgba(0,0,0,0.2));
+}
+.transit:hover {
+  width: 150px;
+  height: 150px;
+  background: radial-gradient(circle, red, yellow, green);
+}
+
+.cartoon {
+  position: relative;
+  background: red;
+  animation: mycartoon infinite 5s
+}
+@keyframes mycartoon {
+    from  {top:0px; background:red; width:100px;}
+    to {top:200px; background:yellow; width:200px;}
+}
+
