@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>MyTodo List</title>
+	<link href="https://cdn.bootcss.com/normalize/8.0.0/normalize.min.css" rel="stylesheet">
+	<link href="https://cdn.bootcss.com/jquery-datetimepicker/2.5.20/jquery.datetimepicker.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/base.css">
+</head>
+<body>
+	<body>
+		<div class="contatiner">
+			<!--总容器开始-->
+			<h1>MyToDo List</h1>
+			<form class="add-task" action="javascript: return false">
+				<!--form表单-->
+				<input type="text" class="content" />
+				<button class="addTaskSubmit">submit</button>
+			</form>
+			<div class="task-list">
+				<!--任务列表-->
+				
+			</div>
+		</div>
+
+		<div class="task-detail">
+			<input type="text" class="detail-content" />
+			<span style="font-size: 16px;color:white;"> 备注</span>
+			<textarea class="desc"></textarea>
+			<span style="font-size: 16px;color:white;"> 设置闹钟</span>
+			<input type="text" class="datetime" />
+			<button class="detail-submit">提交</button>
+		</div>
+
+</body>
+<script src="js/jquery.js"></script>
+<script src="js/datetimepicker.js"></script>
+<script src="js/store.js"></script>
+<script src="js/base.js"></script>
+</html>
