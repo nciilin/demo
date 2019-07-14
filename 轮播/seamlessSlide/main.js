@@ -19,7 +19,7 @@ setInterval(() => {
 function x(n) {
   if (n > 5) {
     n = n % 5
-    if (n === 5) {
+    if (n === 0) {
       n = 5
     }
   }
