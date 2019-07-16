@@ -25,8 +25,6 @@ document.addEventListener('visibilitychange', function(e) {
   }
 })
 
-
-
 function getImage(n){
   return $(`.images > img:nth-child(${x(n)})`)
 }
