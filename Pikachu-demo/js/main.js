@@ -24,8 +24,8 @@
     let id
     id = setTimeout(function run(){
       n+=1
-      container.innerHTML = code.substring(0,n)
-      styleTag.innerHTML = code.substring(0,n)
+      container.innerHTML = Prism.highlight(prefix + code.substring(0,n), Prism.languages.css)
+      styleTag.innerHTML = prefix + code.substring(0,n)
       container.scrollTop = container.scrollHeight
       if(n < code.length){
         id = setTimeout(run, duration)
@@ -34,7 +34,16 @@
       }
     }, duration)
   }
-  let code = `/*
+  let code = `
+  /* 我需要一点代码高亮 */
+  
+.token.selector {
+  color: #690;
+}
+.token.property {
+  color: #905;
+}
+/*
  * 首先，需要准备皮卡丘的皮
  */
 .preview{
