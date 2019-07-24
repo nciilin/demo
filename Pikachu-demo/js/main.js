@@ -82,21 +82,21 @@
   border: 2px solid #000;
 }
 /*
- * 左眼在左边（废话）
+ * 左眼
  */
 .eye.left{
   right: 50%;
   margin-right: 90px;
 }
 /*
- * 右眼在右边（废话）
+ * 右眼
  */
 .eye.right{
   left: 50%;
   margin-left: 90px;
 }
 /*
- * 然后，画皮卡丘的脸
+ * 画皮卡丘的脸
  */
 .face{
   width: 68px;
@@ -180,7 +180,7 @@
   border-radius: 50px;
 }
 /*
- * 好了，这只皮卡丘送给你
+ * 好了，这只皮卡丘完成
  */
 `
   writeCode('',code)
