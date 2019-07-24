@@ -3,54 +3,7 @@
 <head>
 	<meta charset="UTF-8">
 	<title>新闻获取-- 点击更多</title>
-	<style>
-	* {
-		margin: 0;
-		padding: 0;
-	}
-	a {
-		color: #333;
-		text-decoration: none;
-	}
-
-	.container {
-		max-width: 600px;
-		margin: 0 auto;
-	}
-
-	.item {
-		margin-top: 20px;
-		list-style: none;
-	}
-	.item:after{
-		content:'';
-		display: block;
-		clear:both;
-	}
-	.item .thumb img {
-		width: 50px;
-		height: 50px;
-	}
-
-	.item .thumb {
-		float: left;
-	}
-
-	.item h2 {
-		margin-left: 60px;
-		font-size: 14px;
-	}
-
-	.item p{
-		margin-left: 60px;
-		font-size: 14px;
-		margin-top: 18px;
-		color: #ccc;
-	}
-	.load-more {
-		margin-top: 20px;
-	}
-	</style>
+	<link rel="stylesheet" href="./css/default.css">
 </head>
 <body>
 	<div class="container">
@@ -58,7 +11,7 @@
 			<li class="item">
 				<a href="#">
 				<div class="thumb">
-					<img src="http://chuantu.biz/t6/101/1508228796x3071883057.jpg">
+					<img src="https://chuantu.biz/t6/101/1508228796x3071883057.jpg">
 				</div>
 				<h2>冻哭!北京下雪 气象局却和网友"吵"起来了</h2>
 			~步入10月，北方多地开始下雪！今晨（10日），北京部分地区有降雪。结果气象局和网友“吵”起来了...</p>
@@ -69,46 +22,5 @@
 	</div>
 </body>
 <script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.min.js"></script>
-	<script>
-		var pageIndex = 0;
-		$('.load-more').on('click', function(){
-			// 向后端/getNews发送请求
-			$.get('/getNews', {page: pageIndex}).done(function(ret){
-				// 如果后端status想匹配
-				if(ret.status === 0) {
-					pageIndex++; 
-				// 获取后端data内容news
-					appendHtml(ret.data)
-				}else {
-					alert('获取新闻出错')
-				}
-			}).fail(function(){
-				alert('系统出错')
-			})
-		})
-
-		// 执行到这里，获取后端信息
-		function appendHtml(news){
-			// 当信息已经为零时，删除按钮并添加文字
-			if(news.length === 0){
-				$('.load-more').remove();
-				$('.container').append('<p>没有更多数据了</p>')
-				return;
-			}
-			// 输出htmls
-			var htmls = '';
-			$.each(news, function(){
-				htmls += '<li class="item">';
-				htmls += '<a href="' + this.link +'">';
-				htmls += '<div class="thumb"><img src="' + this.img + '"></div>';
-				htmls += '	<h2>' + this.title + '</h2>';
-				htmls += '<p>' + this.brif + '</p>';
-				htmls += '</a></li>';
-			})
-			// 在.news位置后面增添后端内容
-			$('.news').append(htmls)
-		}
-
-		
-	</script>
+<script src="./js/main.js"></script>
 </html>
