@@ -1,0 +1,77 @@
+<!DOCTYPE>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>倒计时器</title>
+</head>
+<body>
+<select id="mySelect" placeholder="选择一个时间">
+	<option value="1">1分钟</option>
+	<option value="5">5分钟</option>
+	<option value="10">10分钟</option>
+	<option value="20">20分钟</option>
+</select>
+	<button id="startButton">start</button>
+	<button id="pauseButton">pause</button>
+	<button id="resumeButton">resume</button>
+<div id="outputDiv">
+</body>
+
+<script>
+var timeLeft = 10
+var lastTimeId
+
+function showTime(){
+	outputDiv.textContent = timeLeft + '秒'
+	if(timeLeft === 0) {
+		return 
+	}
+	timeLeft -= 1
+	lastTimeId = setTimeout(showTime, 1000)
+}
+
+startButton.onclick = function(){
+	var valueNumber = parseInt(mySelect.value,10)
+	var seconds = valueNumber * 60
+
+	timeLeft = seconds
+	if(lastTimeId) {
+		window.clearTimeout(lastTimeId)
+	}
+
+	showTime()
+	pauseButton.disabled = false
+}
+
+pauseButton.onclick = function(){
+	if(lastTimeId) {
+		window.clearTimeout(lastTimeId)
+		resumeButton.disabled = false
+		pauseButton.disabled = true
+	}
+}
+
+resumeButton.onclick = function(){
+	showTime()
+	pauseButton.disabled = false
+	resumeButton.disabled = true
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</script>
+</body>
+</html>
