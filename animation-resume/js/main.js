@@ -97,19 +97,31 @@ var md = `
 
 # 技能介绍
 
-熟悉 JavaScript 、 CSS3、 ES6、 Vue框架
+1. 熟练掌握**HTML5**和常用**CSS3**，具有像素级还原设计稿的能力。
+2. 熟练掌握原生JavaScript，掌握重要概念，如：**原型、闭包、作用域链、异步流程控制**等。熟练ES6及ES7的部分新特性。
+3. 了解HTTP协议及浏览器的渲染过程，了解前端性能优化策略。
+4. 熟悉CMD&AMD机制，熟悉**webpack**打包，优化手段
+5. 熟悉Vue框架的使用，理解重要概念如：**生命周期、异步更新、虚拟DOM、MVVM**。
 
 # 项目介绍
 
-- 导航书签
-[导航书签](https://bloglive.top/myBookmarks/)
-- 手机画板
-[画板](https://bloglive.top/canvas-demo/)
-- 我的简历
-[我的简历](https://bloglive.top/resume/)
-- 其他练习demo (需加上文件路径)
-[源代码](https://github.com/nciilin/demo)
-[demo](https://bloglive.top/demo/) 
+- [会动的简历](https://bloglive.top/Animation-resume/)
+关键词：Prism.js语法高亮、marked.js将markdown语法转为HTML网页
+源代码：[预览](https://github.com/nciilin/Animation-resume)
+- [仿制精美网页](https://bloglive.top/resume/)
+关键词：HTML5 + CSS3动画、过渡效果 
+源代码：[预览](https://github.com/nciilin/resume)
+- [画板](https://bloglive.top/canvas-demo/)
+关键词：canvas、移动端viewport、原生JS
+源代码： [预览](https://github.com/nciilin/canvas-demo)
+- [懒加载](https://bloglive.top/lazyload/)
+关键词： jQuery，鼠标滚动触发
+源代码：[预览](https://github.com/nciilin/lazyload/blob/master/index.html)
+
+# 个人博客
+主要用来记录学习过的前端知识点。
+简书：[预览](https://www.jianshu.com/u/50cbc562caf7)
+博客: [预览](https://bloglive.top/archives/)
 
 # 联系方式
 - QQ： 670700452
