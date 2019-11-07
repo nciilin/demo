@@ -106,17 +106,17 @@ var md = `
 # 项目介绍
 
 - [会动的简历](https://bloglive.top/Animation-resume/)
-关键词：Prism.js语法高亮、marked.js将markdown语法转为HTML网页
-源代码：[预览](https://github.com/nciilin/Animation-resume)
+  - 关键词：Prism.js语法高亮、marked.js将markdown语法转为HTML网页
+  - 源代码：[预览](https://github.com/nciilin/Animation-resume)
 - [仿制精美网页](https://bloglive.top/resume/)
-关键词：HTML5 + CSS3动画、过渡效果 
-源代码：[预览](https://github.com/nciilin/resume)
+  - 关键词：HTML5 + CSS3动画、过渡效果 
+  - 源代码：[预览](https://github.com/nciilin/resume)
 - [画板](https://bloglive.top/canvas-demo/)
-关键词：canvas、移动端viewport、原生JS
-源代码： [预览](https://github.com/nciilin/canvas-demo)
+  - 关键词：canvas、移动端viewport、原生JS
+  - 源代码： [预览](https://github.com/nciilin/canvas-demo)
 - [懒加载](https://bloglive.top/lazyload/)
-关键词： jQuery，鼠标滚动触发
-源代码：[预览](https://github.com/nciilin/lazyload/blob/master/index.html)
+  - 关键词： jQuery，鼠标滚动触发 
+  - 源代码：[预览](https://github.com/nciilin/lazyload/blob/master/index.html)
 
 # 个人博客
 主要用来记录学习过的前端知识点。
