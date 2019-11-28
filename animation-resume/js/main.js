@@ -10,7 +10,7 @@ function writeCss(prefix, code, fn){
       window.clearInterval(id)
       fn && fn.call()
     }
-  }, 30)
+  }, 20)
 }
 function writeMarkdom(markdown, fn) {
   let domPaper = document.querySelector('#paper >.content')
@@ -23,7 +23,7 @@ function writeMarkdom(markdown, fn) {
       window.clearInterval(id)
       fn && fn.call()
     }
-  }, 15)
+  }, 10)
 }
 
 
@@ -105,18 +105,21 @@ var md = `
 
 # 项目介绍
 
-- [会动的简历](https://bloglive.top/demo/animation-resume/)
-  - 关键词：Prism.js语法高亮、marked.js将markdown语法转为HTML网页
-  - 源代码：[查看源代码](https://github.com/nciilin/demo/tree/master/animation-resume)
+- [模仿去那儿网App](https://bloglive.top/Traval-demo/Traval/dist/#/)
+  - 关键词：Vue、原生JS、Vue-Router、响应式、webpack、Stylus、Babel、vue-cli
+  - 描述： 该项目使用了Vue实现了一个去那儿网移动端App，自适应宽度、可以图片左右滚动。查询关键字点击切换城市位置、手指触摸快速切换位置。我用Vue-Router实现了路由功能、axios获取异步数据，Vuex实现数据共享；
+  - 源代码：[查看源代码](https://github.com/nciilin/Traval-demo)
 - [仿制精美网页](https://bloglive.top/resume/)
-  - 关键词：HTML5 + CSS3动画、过渡效果 
+  - 关键词：HTML5 + CSS3动画、过渡效果
+  - 描述： 根据设计图像素比实现DIV+CSS3页面效果，使用CSS3动画，实现点击按钮无缝滚动切换位置，内容展现简历信息；
   - 源代码：[查看源代码](https://github.com/nciilin/resume)
 - [画板](https://bloglive.top/canvas-demo/)
   - 关键词：canvas、移动端viewport、原生JS
+  - 描述：该项目使用原生的JS实现、主要调用Canvas API，实现了划线、调色、橡皮擦功能
   - 源代码： [查看源代码](https://github.com/nciilin/canvas-demo)
-- [懒加载](https://bloglive.top/lazyload/)
-  - 关键词： jQuery，鼠标滚动触发 
-  - 源代码：[查看源代码](https://github.com/nciilin/lazyload/blob/master/index.html)
+- [CSS皮卡丘](https://bloglive.top/Pikachu-demo/)
+  - 关键词： CSS3 原生JS 
+  - 源代码：[查看源代码](https://github.com/nciilin/Pikachu-demo)
 
 # 个人博客
 主要用来记录学习过的前端知识点。
